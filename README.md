@@ -32,7 +32,7 @@ npm install gulp-cli -g
 
 ### 克隆
 
-fastadmin 根目录新建文件夹，比如 gulpdir
+fastadmin 根目录新建文件夹，比如 gulpdir，进入文件夹
 ```
 git clone https://github.com/litemelon/fastadmin-addons-gulp3.git
 ```
