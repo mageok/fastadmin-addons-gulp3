@@ -1,0 +1,22 @@
+{
+  "name": "addons-gulp",
+  "version": "1.0.0",
+  "description": "fastadmin addons gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "litemelon",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-less": "^3.5.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-run-command": "0.0.10",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "run-sequence": "^2.2.1"
+  }
+}
