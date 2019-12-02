@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
 var connectPhp = require('gulp-connect-php');
-var runCommand = require('gulp-run-command').default;
+var run = require('gulp-run');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 var runSequence = require('run-sequence');
@@ -26,7 +26,9 @@ gulp.task('less',function(){
 
 // 启用cms插件
 gulp.task('enable',function() {
-  runCommand(phpExePath + ' think addon -a cms -c enable --force=true',{cwd:rootDir})
+  return run('cd ' + rootDir + ' && ' + phpExePath + ' think addon -a cms -c enable --force=true').exec()    // 执行enable 插件
+    .pipe(gulp.dest('output'))      // 如果执行错误，输出，方便调试
+  ;
 });
 
 // 监测文件变化, 编译less,js 等addons/cms文件夹内要做的事情
